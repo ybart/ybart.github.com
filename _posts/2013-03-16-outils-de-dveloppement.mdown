@@ -1,0 +1,186 @@
+---
+layout: post
+title: "Outils de développement"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}
+
+## Sommaire
+
+- Xcode & Command line tools
+- Homebrew
+- Git
+- RVM
+- Ruby
+- Source Tree
+- Sublime Text 2
+- OmniGraffle
+- BitBucket
+- GitHub
+- Heroku
+- 1and1.fr
+- Formation continue
+
+Les informations contenues de ce document sont conçues pour OS X Mountain 
+Lion. Des adaptations peuvent être nécessaires sur d'autres environnements.
+
+## Xcode & Command line tools
+
+Xcode est un IDE pour Mac OS X principalement utilisé pour le développement 
+d'applications natives iOS et OS X.
+
+Les Command Line Tools sont requis pour l'installation de logiciels. Depuis
+les versions récentes, Homebrew est capable de compiler en utilisant Xcode
+uniquement. Cependant d'autres Rubygems et RVM nécessitent les outils en ligne
+de commande pour pouvoir compiler. Ils installent également Git. Une version 
+plus récente pourra éventuellement être installée avec Homebrew en cas de 
+besoin.
+
+Il est possible d'installer les Command Line Tools sans installer Xcode
+en choisissant les options appropriées sur le site d'Apple
+
+Site: http://developer.apple.com
+
+## Homebrew
+
+Homebrew est un gestionnaire de packages pour Mac OS X géré par la communauté.
+De la même manière que sur la plupart des distributions Linux, il permet 
+d'installer de nombreux logiciels Open Source à l'aide de la commande brew.
+
+L'intérêt d'un gestionnaire de package est d'éviter de gérer la compilation
+et l'installation manuellement et de laisser le gestionnaire de packages
+choisir les options de configuration et de compilation adaptée, ainsi que
+l'emplacement de l'installation.
+
+Je l'utilise pour les dépendances des Gems compilées, ou bien pour certains
+outils en ligne de commande comme ImageMagick ou bien ffmpeg.
+
+Site: http://mxcl.github.com/homebrew/
+
+### Installation:
+
+	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+### Mise à jour:
+
+	brew update
+
+### Plug-ins:
+
+#### Mises à jour automatiques:
+
+* Blog: http://mkalmes.net/2012/01/02/brewupdate-a-launchd-agent-for-automatic-homebrew-formulae-updates.html
+* Code: https://github.com/mkalmes/brewupdate/
+
+## Git
+
+Git est un gestionnaire de version multiplateforme décentralisé créé en 2005
+par Linus Torvalds. Il est extrêmement populaire dans la communauté Open 
+Source. C'est la raison pour laquelle je l'ai provilégié pour la gestion des
+versions de mes projets plutôt que Bazar ou Mercurial.
+
+L'intérêt d'un système décentralisé est de ne pas dépendre d'un serveur.
+Ainsi, chaque copie est autonome, pouvant ainsi indifférement servir de 
+sauvegarde, de copie de travail ou bien de dépôt référence. Ainsi en cas de
+panne du serveur, n'importe quelle copie de travail peut être utilisée pour
+restaurer les données.
+
+Site: http://git-scm.com
+
+### Options recommandées:
+
+- Git Flow
+	Git Flow est un ensemble de converions pour gérer son code source 
+	avec Git. Chaque branche a un rôle bien défini est nommée en
+	suivant une convention précise.
+	
+	En résumé, la branche master contient le code en production et
+	n'est mise à jour que lorsque la production est également mise à jour.
+	Une branche develop est basée sur la branche master et contient en
+	plus les dernières fonctionnalités terminées validées.
+	Les fonctionalités en cours sont développées dans des branches
+	spécifiques dont le nom est préfixé par feature/.
+
+	Les correctifs de bugs urgents sont développés dans des branches
+	préfixées par hotfix/.
+	Les release sont crées à l'aide d'une brance release/ qui permet
+	d'effectuer les modifications spécifiques à la création de release
+	comme la modification des notes de versions ou du numéro de version.
+
+	La commande git-flow permet d'automatiser la gestion de ces branches
+	(création, nommage, suppression et fusion) en fonction de la tâche.
+	La commande git-flow est intégrée à Source Tree.
+
+	Site: http://nvie.com/posts/a-successful-git-branching-model/
+	Commande: https://github.com/nvie/gitflow
+
+## RVM
+
+RVM est un outil multiplateforme destiné à facilité la compilation,
+l'installation et l'utilisation de plusieurs versions de Ruby. Dans mon cas je
+l'utilise pour utiliser une version de Ruby récente pour le développement tout
+en me laissant la possibilité d'utiliser la version système. Occasionnellement 
+je peux l'utiliser aussi pour tester une version plus récente de ruby et
+rapidement revenir à la version précédente en cas de problème.
+
+Site: http://mxcl.github.com/homebrew/
+
+## Ruby
+
+Ruby est le langage de prédilection que j'utilise pour développer des sites 
+Web.
+
+J'installe Ruby avec RVM. Lorsque Ruby est installé, il est installé avec tout
+de nombreux logiciels qui ne font pas partie du langage lui-même mais 
+facilitent grandement son utilisation. Évidemment, ces outils sont développés
+en Ruby.
+
+Le premier outil est Rubygems, c'est un gestionnaire de packages à la manière
+de Homebrew mais spécifiquement destinés à Ruby. Il permet d'installer de 
+nouveaux composants ruby, appelés gems, simplement à partir de la ligne de 
+commande. Les gems sont stockées sur le site rubygems.org, mais il est 
+également possible d'héberger soi-même les gems.
+
+Site: http://rubygems.org
+
+### Options recommandées:
+
+- Pow
+	Pow est un serveur de développement pour Mac OS X, il permet de
+	prévisualiser des sites Rack ou bien des sites statiques facilement en
+	tapant le nom des projets dans le navigateur suivi de .dev.
+
+	Il est également possible d'utiliser l'extension xip.io (requiert
+	une connexion à Internet) afin de consulter un site géré par Pow sur
+	une autre machine.
+
+	Site: http://pow.cx
+	xip.io: http://xip.io
+	Article sur xip.io: http://37signals.com/svn/posts/3191-announcing-pow-040-with-xipio-support
+
+- Bundler
+	Bundler permet de gérer les dépendances d'un projet Ruby. Les 
+	dépendances sont listées dans un fichier Gemfile à la racine du 
+	projet. La commande bundle permet ensuite de résoudre les dépendances,
+	de les installer installer, et de créer un fichier listant les 
+	versions installées de sorte que les collaborateurs du projet
+	utilisent exactement la même version d'un projet. 
+
+	Site: http://gembundler.com
+
+## SourceTree
+
+## Sublime Text 2
+
+## OmniGraffle
+
+## Formation continue
+
+Les sites suivants fournissent des ressources pour la formation continue des développeurs:
+
+- Railscasts: http://railscasts.com — diffusions d'écran sur Ruby on Rails
+- Code Shool: http://www.codeschool.com — diffusions d'écran en ligne sur Ruby, Javascript, HTML/CSS, iOS.
+- Thoughtbot: http://learn.thoughtbot.com/ — Formations en personne ou en ligne, livres, diffusions d'écran sur Ruby et Rails.
+- Paris.rb: Résautage autour de la communauté Ruby parisienne et française.
