@@ -2,8 +2,8 @@
 layout: post
 title: "Outils de développement"
 description: ""
-category: 
-tags: []
+category: Development
+tags: ['OS X', 'Development', 'Tools', 'Ruby', 'Rails', 'Git']
 ---
 {% include JB/setup %}
 
@@ -14,6 +14,7 @@ tags: []
 - Git
 - RVM
 - Ruby
+- Live Reload
 - Source Tree
 - Sublime Text 2
 - OmniGraffle
@@ -169,6 +170,8 @@ Site: http://rubygems.org
 	utilisent exactement la même version d'un projet. 
 
 	Site: http://gembundler.com
+
+## Live Reload
 
 ## SourceTree
 
