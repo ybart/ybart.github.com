@@ -14,7 +14,16 @@ frameworks, et cela peut freiner un peu l'apprentissage le temps d'adopter les n
 
 Voici quelques liens utiles pour commencer à utiliser Ember.JS:
 
-* http://gmoeck.github.io/2011/03/10/sproutcore-mvc-vs-rails-mvc.html
-* http://emberjs.com/guides
-* http://emberjs.com/blog
-* http://emberwatch.com
+* [Ember Guides][1]
+* [Ember Blog][2]
+* [Tutorial: Ember with Rails API][3]
+* [Blog Post: Differences between server MVC and client MVC][4]
+* [Blog Post: Building a Ember Application using Rails][5]
+* [Community Resources: Ember Watch][6]
+
+[1]: http://emberjs.com/guides
+[2]: http://emberjs.com/blog
+[3]: http://reefpoints.dockyard.com/ember/2013/01/07/building-an-ember-app-with-rails-api-part-1.html
+[4]: http://gmoeck.github.io/2011/03/10/sproutcore-mvc-vs-rails-mvc.html
+[5]: http://josh.minzner.org/?p=6
+[6]: http://emberwatch.com
