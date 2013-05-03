@@ -16,14 +16,16 @@ Voici quelques liens utiles pour commencer à utiliser Ember.JS:
 
 * [Ember Guides][1]
 * [Ember Blog][2]
-* [Tutorial: Ember with Rails API][3]
-* [Blog Post: Differences between server MVC and client MVC][4]
-* [Blog Post: Building a Ember Application using Rails][5]
-* [Community Resources: Ember Watch][6]
+* [Ember Data API Documentation][3]
+* [Tutorial: Ember with Rails API][4]
+* [Blog Post: Differences between server MVC and client MVC][5]
+* [Blog Post: Building a Ember Application using Rails][6]
+* [Community Resources: Ember Watch][7]
 
 [1]: http://emberjs.com/guides
 [2]: http://emberjs.com/blog
-[3]: http://reefpoints.dockyard.com/ember/2013/01/07/building-an-ember-app-with-rails-api-part-1.html
-[4]: http://gmoeck.github.io/2011/03/10/sproutcore-mvc-vs-rails-mvc.html
-[5]: http://josh.minzner.org/?p=6
-[6]: http://emberwatch.com
+[3]: http://www.thomasboyt.com/ember-data-docs/
+[4]: http://reefpoints.dockyard.com/ember/2013/01/07/building-an-ember-app-with-rails-api-part-1.html
+[5]: http://gmoeck.github.io/2011/03/10/sproutcore-mvc-vs-rails-mvc.html
+[6]: http://josh.minzner.org/?p=6
+[7]: http://emberwatch.com
